@@ -1,8 +1,12 @@
+import React from "react";
+import Search from "./components/Search";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>hi mom</h1>
+    
+    <div className="bg-[#0D1117] bg-cover h-screen">
+      <Search/>
     </div>
   );
 }
