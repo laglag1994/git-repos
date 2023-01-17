@@ -6,7 +6,7 @@ import Repos from "./components/Repos";
 function App() {
   return (
     
-    <div className="bg-[#0D1117] bg-cover h-screen ">
+    <div className="bg-[#0D1117] bg-cover h-[100hv] ">
       <Search/>
       <Card/>
       <Repos/>
