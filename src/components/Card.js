@@ -11,7 +11,7 @@ const Card = ({theCard}) => {
         <div className=' pt-10 flex items-center justify-center '>
             <div className='w-[700px] h-[400px] border-[#30363D] border-2 rounded-md flex items-center justify-evenly '>
 
-                <div className='flex flex-col items-center justify-center gap-5'>
+                <div className='flex flex-col items-center justify-center gap-5 text-center text-ellipsis'>
                     <img src={theCard.avatar_url} className="rounded-full h-[200px]" />
                     <h1 className='text-[#C9D1D9] text-3xl'>{theCard?.name}</h1>
                 </div>
