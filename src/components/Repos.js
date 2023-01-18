@@ -3,7 +3,8 @@ import { FaStar } from "react-icons/fa";
 
 
 
-const Repos = () => {
+const Repos = ({theRepos}) => {
+    console.log('the repossssss',theRepos)
     return (
 
 

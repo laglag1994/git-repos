@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { FaGithub } from "react-icons/fa";
-import React, {useState} from 'react'
+import { useState } from "react";
+
+
+
 
 
 const Search = ({searchValue}) => {
+
+
     const [text, setText]=useState();
 
     const onSubmit=(e) =>{
@@ -11,11 +16,9 @@ const Search = ({searchValue}) => {
         searchValue(text);
     }
 
-
-const Search = () => {
     return (
         <div className='bg-[#161B22] h-24 py-4 px-10 flex justify-center items-center'>
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className='flex gap-3 flex-row-reverse'>
 
                     <div className='flex text-[#9CA3AF] relative '>
