@@ -28,7 +28,7 @@ const Card = () => {
                     </div>
 
                     <div className='flex flex-row-reverse gap-2'>
-                    <h1>public repos: 18</h1>
+                    <h1>Public repostories: 18</h1>
                     <h1 className='text-2xl text-[#8B949E] '><FaBook /></h1>
                     </div>
 
