@@ -14,7 +14,7 @@ function App() {
   const [card, setCard] = useState();
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [term, setTerm] = useState('mastagoon');
+  const [term, setTerm] = useState('');
   // const [timeStamp, setTimeStamp] = useState(Date.now())
 
 
@@ -49,25 +49,27 @@ function App() {
 
 
 
-console.log('cardo',card)
+  if (loading)return <h1 className="text-[#8B949E] text-center text-3xl">Loeading....</h1> 
 
   return (
 
-    <div className="bg-[#0D1117] bg-cover h-[100hv]">
+    <div className="container bg-[#0D1117] bg-cover h-[100hv]  mx-auto w-[100wv]">
 
 
       <Search searchValue={(text) => setTerm(text)} />
 
-      {!loading && repos.length === 0 && <h1 className="text-[#8B949E] text-center text-3xl">No Data To Show</h1>}
+      {card?  <Card theCard={card} /> :<h1 className="text-[#8B949E] text-center text-3xl">No Data To Show</h1> }
+
+      {repos.length === 0 ?  <h1 className="text-[#8B949E] text-center text-3xl">No Data To Show</h1> :
+            repos.map(repo =>(
+              <Repos key={repo.id} repo={repo}/>
+            ))
+  
+      }
 
 
-      {loading ? <h1 className="text-[#8B949E] text-center text-3xl">Loeading....</h1> :
-        <>
 
-          <Card theCard={card} />
-          <Repos theRepos={repos} />
 
-        </>}
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { FaUser } from "react-icons/fa";
 
 
 const Card = ({theCard}) => {
-console.log('the', theCard)
+
     return (
         <div className=' pt-10 flex items-center justify-center '>
             <div className='w-[700px] h-[400px] border-[#30363D] border-2 rounded-md flex items-center justify-evenly '>
@@ -29,7 +29,7 @@ console.log('the', theCard)
                     </div>
 
                     <div className='flex flex-row-reverse gap-2'>
-                    <h1>Public repos: 18</h1>
+                    <h1>Public repos: {theCard.public_repos}</h1>
                     <h1 className='text-2xl text-[#8B949E] '><FaBook /></h1>
                     </div>
 
