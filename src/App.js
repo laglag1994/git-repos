@@ -11,14 +11,31 @@ import { useEffect } from "react";
 function App() {
 
 
-  const [data, setData] = useState(null);
+  const [card, setCard] = useState([]);
+  const [repos, setRepos]=useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [term, setTerm]=useState('');
+  const [timeStamp, setTimeStamp] = useState(Date.now())
+
+
 
   useEffect(() => {
 
     fetch(`https://api.github.com/users/${term}`)
+    .then(res=>res.json())
+    .then(data=>{
+      setCard(data.user)
+      setLoading(false)
+    })
+    .catch(err=> console.log(err))
+  }, []);
+
+  useEffect(() => {
+
+    fetch(`https://api.github.com/users/${term}/repos`)
+    .then(res=>res.json())
+    .then(data=>console.log('repos',data))
+    .catch(err=> console.log(err))
   }, []);
 
 
@@ -29,10 +46,19 @@ function App() {
 
   return (
     
-    <div className="bg-[#0D1117] bg-cover h-[100hv] ">
-      <Search/>
-      <Card/>
-      <Repos/>
+    <div className="bg-[#0D1117] bg-cover h-[100hv]">
+
+      
+      <Search searchValue={(text) => setTerm(text)}/>
+
+      {!loading && repos.length === 0 && <h1 className="text-[#8B949E] text-center text-3xl">No Data To Show</h1>}
+
+
+      {loading? <h1 className="text-[#8B949E] text-center text-3xl">Loeading....</h1> :<Repos />&& <Card />}
+
+
+
+      
     </div>
   );
 }

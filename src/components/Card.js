@@ -12,7 +12,7 @@ const Card = () => {
 
                 <div className='flex flex-col items-center justify-center gap-5'>
                     <img src='https://avatars.githubusercontent.com/u/120031321?v=4' className="rounded-full h-[200px]" />
-                    <h1 className='text-[#C9D1D9] text-3xl'>Ruqayyah</h1>
+                    <h1 className='text-[#C9D1D9] text-3xl'>{Data.name}</h1>
                 </div>
 
                 <div className='text-[#8B949E] text-1xl flex flex-col gap-3 justify-start items-start'>
