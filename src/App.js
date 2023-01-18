@@ -20,7 +20,6 @@ function App() {
 
 
   useEffect(() => {
-
     fetch(`https://api.github.com/users/${term}`)
       .then(res => res.json())
       .then(data => {
@@ -46,12 +45,12 @@ function App() {
   }, [term]);
 
 
-
-
+  console.log(Object.keys(repos));
 
   if (loading)return <h1 className="text-[#8B949E] text-center text-3xl">Loeading....</h1> 
 
   return (
+
 
     <div className="container bg-[#0D1117] bg-cover h-[100hv]  mx-auto w-[100wv]">
 
@@ -61,7 +60,7 @@ function App() {
       {card?  <Card theCard={card} /> :<h1 className="text-[#8B949E] text-center text-3xl">No Data To Show</h1> }
 
       {repos.length === 0 ?  <h1 className="text-[#8B949E] text-center text-3xl">No Data To Show</h1> :
-            repos.map(repo =>(
+             repos.map(repo =>(
               <Repos key={repo.id} repo={repo}/>
             ))
   
