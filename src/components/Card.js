@@ -5,7 +5,7 @@ import { FaUser } from "react-icons/fa";
 
 
 
-const Card = ({theCard}) => {
+const Card = ({ theCard }) => {
 
     return (
         <div className=' pt-10 flex items-center justify-center '>
@@ -13,7 +13,7 @@ const Card = ({theCard}) => {
 
                 <div className='flex flex-col items-center justify-center gap-5 text-center text-ellipsis'>
                     <img src={theCard.avatar_url} className="rounded-full h-[200px]" />
-                    <h1 className='text-[#C9D1D9] text-3xl'>{theCard?.name}</h1>
+                    <a href={theCard.html_url} className='text-[#C9D1D9] text-3xl hover:text-[#8B949E]'>{theCard?.name}</a>
                 </div>
 
                 <div className='text-[#8B949E] text-1xl flex flex-col gap-3 justify-start items-start'>
@@ -29,8 +29,8 @@ const Card = ({theCard}) => {
                     </div>
 
                     <div className='flex flex-row-reverse gap-2'>
-                    <h1>Public repos: {theCard.public_repos}</h1>
-                    <h1 className='text-2xl text-[#8B949E] '><FaBook /></h1>
+                        <h1>Public repos: {theCard.public_repos}</h1>
+                        <h1 className='text-2xl text-[#8B949E] '><FaBook /></h1>
                     </div>
 
                     <h1 className='text-[#8B949E] text-xl pt-10'>{theCard.bio}</h1>

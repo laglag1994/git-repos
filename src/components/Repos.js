@@ -25,8 +25,8 @@ const Repos = ({ repo }) => {
 
                     </div>
 
-                    <div className='bg-[#1F6FEB] flex gap-2 px-8 py-2 text-white rounded-md'>
-                        <a href={repo.html_url} className='hover:opacity-80 transition-all'>Visit</a>
+                    <div className='bg-[#1F6FEB] flex gap-2 px-8 py-2 text-white rounded-md hover:opacity-80'>
+                        <a href={repo.html_url} className=' transition-all'>Visit</a>
                     </div>
                 </div>
 
