@@ -9,7 +9,7 @@ const Card = ({ theCard }) => {
 
     return (
         <div className=' pt-10 flex items-center justify-center '>
-            <div className='w-[700px] h-[400px] border-[#30363D] border-2 rounded-md flex items-center justify-evenly '>
+            <div className='w-[700px] h-[400px] border-[#30363D] border-2 rounded-md flex items-center  justify-evenly '>
 
                 <div className='flex flex-col items-center justify-center gap-5 text-center text-ellipsis'>
                     <img src={theCard.avatar_url} className="rounded-full h-[200px]" />
@@ -33,7 +33,7 @@ const Card = ({ theCard }) => {
                         <h1 className='text-2xl text-[#8B949E] '><FaBook /></h1>
                     </div>
 
-                    <h1 className='text-[#8B949E] text-xl pt-10'>{theCard.bio}</h1>
+                    <h1 className='text-[#8B949E] text-xl pt-10 text-left'>{theCard.bio}</h1>
 
                 </div>
 
